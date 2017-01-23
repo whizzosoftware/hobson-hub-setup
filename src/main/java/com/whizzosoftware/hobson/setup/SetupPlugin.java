@@ -65,4 +65,8 @@ public class SetupPlugin extends AbstractHobsonPlugin {
     public void onShutdown() {
         getHubManager().getLocalManager().unpublishWebApplication(SetupApplication.PATH);
     }
+
+    @Override
+    public void onPluginConfigurationUpdate(PropertyContainer config) {
+    }
 }
