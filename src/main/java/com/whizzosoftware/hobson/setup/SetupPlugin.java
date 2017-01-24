@@ -40,7 +40,7 @@ public class SetupPlugin extends AbstractHobsonPlugin {
         getHubManager().getLocalManager().publishWebApplication(new HubWebApplication(SetupApplication.PATH, SetupApplication.class));
 
         // determine web app URL prefix
-        PropertyContainer pc = getHubManager().getHub(HubContext.createLocal()).getConfiguration();
+        PropertyContainer pc = getHubManager().getConfiguration(HubContext.createLocal());
         if (!pc.getBooleanPropertyValue(HubConfigurationClass.SETUP_COMPLETE)) {
             String consoleURI;
             if (pc.getBooleanPropertyValue(HubConfigurationClass.SSL_MODE)) {
